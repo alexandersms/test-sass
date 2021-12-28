@@ -76,13 +76,17 @@ th {
   padding: 0;
 }
 
+html {
+  font-size: 18px;
+}
+
 body {
   background: #70a9b6;
 }
 
 .color {
   font-size: 12rem;
-  color: #093d6b;
+  color: #0d4a80;
 }
 
 table {
@@ -120,7 +124,7 @@ table thead {
 }
 
 .btn, .card-action, .btn-danger, .card-cancel {
-  padding: 12px 16px;
+  padding: 0.2777777778em 0.6666666667em;
   border: none;
   border-radius: 10px;
   font-size: 14px;
@@ -129,10 +133,15 @@ table thead {
 }
 
 .btn, .card-action, .btn-danger, .card-cancel {
-  background: #093d6b;
+  background: #0d4a80;
 }
 .btn:hover, .card-action:hover, .btn-danger:hover, .card-cancel:hover {
-  background: #05223c;
+  background: #082f52;
+}
+
+.big {
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
 .btn-danger, .card-cancel {

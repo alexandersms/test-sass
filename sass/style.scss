@@ -1,11 +1,17 @@
 @import "libs/reset.scss";
 @import "libs/mixins.scss";
+@import "libs/functions.scss";
 @import "libs/responsive.scss";
 
 $amount: 10;
 $danger: rgb(170, 16, 16);
-$primary: rgb(9, 61, 107);
+$primary: rgb(13, 74, 128);
 $padding: 10px;
+$base-font-size: 18px;
+
+html {
+  font-size: $base-font-size;
+}
 
 body {
   background: #70a9b6;
@@ -45,25 +51,19 @@ table {
   
 }
 
-// .card::after {
-//   content: "";
-//   width: 0;
-//   height: 0;
-//   border-top: 10px solid #fafafa;
-//   border-left: 10px solid transparent;
-//   border-right: 10px solid transparent;
-//   position: absolute;
-//   bottom: -5px;
-//   left: calc(50% - 10px);
-// }
-
 %btn {
-  padding: $padding + 2px 16px;
+  // padding: $padding + 2px 16px;
+  padding: em(5) em(12);
   border: none;
   border-radius: 10px;
   font-size: 14px;
   font-weight: 600;
-  color: #c4eaf3;
+  @if (lightness($primary) > 50%) {
+    color: #000;
+  } @else {
+    color: #c4eaf3;
+  }
+  
 }
 
 .btn {
@@ -73,6 +73,11 @@ table {
   &:hover {
     background: darken($primary, $amount);
   }
+}
+
+.big {
+  font-size: 2rem;
+  text-transform: uppercase;
 }
 
 .btn-danger {
