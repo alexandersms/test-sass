@@ -8,7 +8,7 @@ $primary: rgb(9, 61, 107);
 $padding: 10px;
 
 body {
-  background: #c4eaf3;
+  background: #70a9b6;
 }
 
 .color {
@@ -37,9 +37,25 @@ table {
   padding: 10px;
   border-radius: 3px;
   margin-bottom: 20px;
+  position: relative;
+  background: #fafafa;
+  @include triangle($color: #ff00ff, $size: 13px);
   //   @include rotate(5deg);
-  @include transform(rotate(-5deg));
+  //   @include transform(rotate(-2deg));
+  
 }
+
+// .card::after {
+//   content: "";
+//   width: 0;
+//   height: 0;
+//   border-top: 10px solid #fafafa;
+//   border-left: 10px solid transparent;
+//   border-right: 10px solid transparent;
+//   position: absolute;
+//   bottom: -5px;
+//   left: calc(50% - 10px);
+// }
 
 %btn {
   padding: $padding + 2px 16px;
