@@ -1,0 +1,13 @@
+@mixin rotate($rotation: -5deg) {
+  -ms-transform: rotate($rotation);
+  -webkit-transform: rotate($rotation);
+  transform: rotate($rotation);
+}
+
+@mixin transform($transform) {
+  -ms-transform: ($transform);
+  -webkit-transform: ($transform);
+  -o-transform: ($transform);
+  -moz-transform: ($transform);
+  transform: ($transform);
+}

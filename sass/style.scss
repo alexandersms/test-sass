@@ -1,0 +1,83 @@
+@import "libs/reset.scss";
+@import "libs/mixins.scss";
+@import "libs/responsive.scss";
+
+$amount: 10;
+$danger: rgb(170, 16, 16);
+$primary: rgb(9, 61, 107);
+$padding: 10px;
+
+body {
+  background: #c4eaf3;
+}
+
+.color {
+  font-size: 12rem;
+  color: $primary;
+}
+
+table {
+  width: 100%;
+
+  td {
+    border: 1px solid red;
+  }
+  thead {
+    background: black;
+    color: white;
+  }
+}
+
+%shadow {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.3);
+}
+
+.card {
+  @extend %shadow;
+  padding: 10px;
+  border-radius: 3px;
+  margin-bottom: 20px;
+  //   @include rotate(5deg);
+  @include transform(rotate(-5deg));
+}
+
+%btn {
+  padding: $padding + 2px 16px;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #c4eaf3;
+}
+
+.btn {
+  @extend %btn;
+  background: $primary;
+
+  &:hover {
+    background: darken($primary, $amount);
+  }
+}
+
+.btn-danger {
+  @extend .btn;
+  background: $danger;
+
+  &:hover {
+    background: lighten($danger, $amount);
+  }
+}
+
+.card-action {
+  @extend .btn;
+}
+
+.card-cancel {
+  @extend .btn-danger;
+}
+
+@media #{$medium-up} {
+  .btn {
+    width: 100%;
+  }
+}
